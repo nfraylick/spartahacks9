@@ -1,65 +1,26 @@
 # quack-comments README
 
-This is the README for your extension "quack-comments". After writing up a brief description, we recommend including the following sections.
+QUACK
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
+## Inspiration
+When trying to figure out a tough technical problem, it has been shown that talking it out will increase your understanding of the code and present a solution.
 
-\!\[feature X\]\(images/feature-x.png\)
+## What it does
+Quack Comments is a Visual Studio Code Extention that allows users to screen record their environment and talk their problems out with a virtual rubber duck. After the user stops recording, an embedded link to the source file of the video so developers can review these and understand the code better than traditional comments. Another use case of Quack Comments is to practice explaining code during code interviews. Users can use Quack Comments to record themselves explaining their solution so they can play it back and hear how they sound. The audio is then parsed and comments are generated based on the user's explanation of the lines.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## How we built it
+The Visual Studio Code extension is developed in Javascript. The screen recorder is written in C# and uses Matlab plugins to compress the video and audio files together. The audio parsing is done through a Cloudflare application to parse through the audio and create comments.
 
-## Requirements
+## Challenges we ran into
+A lot. To start, the extension package was continuously getting configured incorrectly. The Matlab integration with C# was more challenging than we thought. We did not know how to use Cloudflare so it was a challenge to learn it.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Accomplishments that we're proud of
+We are proud of the user experience with this project. The idea is so fun and really useful for developers.
 
-## Extension Settings
+## What we learned
+We learned how to make a natural language model and host it through Cloudflare. We learned how to make the duck animation and develop VSCode extensions.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## What's next for Quack Comments
+We hope to publish the extension for anyone to use.
